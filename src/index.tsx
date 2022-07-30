@@ -1,19 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import BasicExample from './Navbar/navbar';
-import Cards from './Cards/cards';
-import PagCard from './Pagination/Pagination';
+import BasicExample from './Components/Navbar/navbar';
+import Cards from './Components/Cards/cards';
+import PagCard from './Components/Pagination/Pagination';
+import Search from './Components/Search/Search';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <React.StrictMode> 
     <BasicExample />
     <div className="card__div-container">
+      <div className="search__container">
+      <Search />
+      </div>
       <Cards />
       <Cards />
       <Cards />
@@ -30,7 +33,7 @@ root.render(
       <Cards />
       <div className="pag__div-container">
       <PagCard />
-    </div>
+      </div>
     </div>
 
   </React.StrictMode>

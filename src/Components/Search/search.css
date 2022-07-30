@@ -1,0 +1,14 @@
+.form-select {
+    width: 30%;
+}
+
+.search__container{
+    display: inline-block;
+    width: 100%;
+}
+
+.form__container {
+    display: flex;
+    justify-content: center;
+    margin: 20px
+}
