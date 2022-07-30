@@ -3,13 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import BasicExample from './Navbar/navbar';
+import Cards from './Cards/cards';
+import PagCard from './Pagination/Pagination';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BasicExample />
+    <div className="card__div-container">
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <Cards />
+      <div className="pag__div-container">
+      <PagCard />
+    </div>
+    </div>
+
   </React.StrictMode>
 );
 

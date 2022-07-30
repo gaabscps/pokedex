@@ -1,0 +1,16 @@
+.pagination {
+    margin: 20px 0;
+    justify-content: center;
+}
+.pag__div-container {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .pagination {
+        width: 100%;
+        justify-content: center;
+    }
+}
