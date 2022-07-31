@@ -6,6 +6,8 @@ import BasicExample from './Components/Navbar/navbar';
 import Cards from './Components/Cards/cards';
 import PagCard from './Components/Pagination/Pagination';
 import Search from './Components/Search/Search';
+import Form from './Alura/Components/Form/Form';
+import Lista from './Alura/Components/Lista/Lista';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,24 +20,18 @@ root.render(
       <Search />
       </div>
       <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
       <div className="pag__div-container">
       <PagCard />
       </div>
     </div>
 
+
+{/* 
+   <div>
+      <Form />
+      <Lista />
+    </div>
+*/}
   </React.StrictMode>
 );
 

@@ -1,20 +1,21 @@
 .cards__container {
     min-width: 8rem;
-    margin: 2px 2px; 
     padding-top: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card__ind {
     width: 15rem
 }
 
-.card__ind card{
-    min-width: 16%;    
+.card__ind{
+    min-width: 16%; 
+    margin: 4px 2px;    
 }
 
 .card__div-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    height: 100vh;
     background-image: url(https://wallpapercave.com/wp/wp1902719.jpg);
     background-repeat: no-repeat;
     background-size:cover;
@@ -23,13 +24,9 @@
     list-style-image: url('../../img/right-arrow.png');
   }
 
-  li {
-
-  }
-
 @media only screen and (max-width: 600px) {
  .card__ind{
     width: 8rem;
     margin: 5px 5px
  }   
-}
+} 
