@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import BasicExample from './Components/Navbar/navbar';
-import Cards from './Components/Cards/cards';
 import PagCard from './Components/Pagination/Pagination';
 import Search from './Components/Search/Search';
 import Form from './Alura/Components/Form/Form';
 import Lista from './Alura/Components/Lista/Lista';
+import Home from './Pages/home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+
 root.render(
   <React.StrictMode> 
     <BasicExample />
@@ -19,14 +21,14 @@ root.render(
       <div className="search__container">
       <Search />
       </div>
-      <Cards />
+      <Home />
       <div className="pag__div-container">
       <PagCard />
       </div>
     </div>
 
 
-{/* 
+{/*  
    <div>
       <Form />
       <Lista />

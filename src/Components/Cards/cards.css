@@ -1,32 +1,32 @@
 .cards__container {
-    min-width: 8rem;
-    padding-top: 20px; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  min-width: 8rem;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .card__ind {
-    width: 15rem
+  width: 15rem;
+  min-width: 16%;
+  margin: 4px 2px;
+
 }
 
-.card__ind{
-    min-width: 16%; 
-    margin: 4px 2px;    
+.card__div-container {
+  height: 100vh;
+  background-image: url(https://wallpapercave.com/wp/wp1902719.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card__div-container{
-    height: 100vh;
-    background-image: url(https://wallpapercave.com/wp/wp1902719.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-  }
-  ul {
-    list-style-image: url('../../img/right-arrow.png');
-  }
+ul {
+  list-style-image: url('../../img/right-arrow.png');
+}
 
 @media only screen and (max-width: 600px) {
- .card__ind{
+  .card__ind {
     width: 8rem;
     margin: 5px 5px
- }   
-} 
+  }
+}
