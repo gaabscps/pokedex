@@ -1,25 +1,40 @@
-.poke__container {
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;700&display=swap');
+
+.poke__container{
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Mali', cursive;
 }
 
-.right__container {
+.lower__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     width: 30%;
 }
 
-.left__container  {
-    display: flex;
+.upper__container {
     width: 30%;
-    justify-content: center;
-    margin: 5rem 0;
+    margin-top: 2rem;
 }
 
 .value__container {
-    margin-left: 3rem;
+    text-align: center;
+    width: 30%;
+    font-size: 1.5rem;
 }
 
 .stats__name{
-    text-align: center;
+    text-align: end;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+.stats__value {
+    margin: 5px 0;
 }
 
 .rc {
@@ -28,6 +43,37 @@
 
 .poke__img{
     width: 40%;
+    min-width: 100px;
     margin: 0 auto;
     display: block;
+    background-color: rgba(106, 79, 149, 0.4);
+    border: solid 1px rgba(106, 79, 149, 0.4);
+    border-radius: 120px;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px 1px;
 }
+
+.poke__img:hover{
+    background-color: rgba(59, 175, 127, 0.4);
+    border: solid 1px rgba(59, 175, 127, 0.4);
+}
+
+.pokemon__basic {
+    margin-top: 2rem;
+}
+
+.pokeName, .id {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.type{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    
+
+}
+    

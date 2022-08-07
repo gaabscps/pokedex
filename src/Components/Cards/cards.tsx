@@ -22,8 +22,8 @@ function Cards({ name }: CardProps) {
                 const { data } = response;
                 setImagem(data.sprites.front_default);
                 setId(data.id);
-                setType(data.types.map((type: { type: any; }) => 
-                type.type.name).join(' & '))
+                setType(data.types.map((type: { type: any; }) =>
+                    type.type.name).join(' & '))
             }
             )
             .catch((error: any) => console.log(error));
@@ -41,12 +41,12 @@ function Cards({ name }: CardProps) {
                         className={name}
                     >{name}</Card.Title>
                     <Card.Text>
-                        #{+id}
+                        <p className='card__id'>#{+id}</p>
                     </Card.Text>
                     <Card.Text>
-                        {type}
+                        <p className="card__type">{type}</p>
                     </Card.Text>
-                    <Link to={`/pokemon/` + name}> Sobre {name}</Link>
+                    <Link className='about__button' to={name}> Sobre {name}</Link>
                 </Card.Body>
             </Card>
         </>

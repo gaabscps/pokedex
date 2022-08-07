@@ -8,6 +8,7 @@ import Lista from './Alura/Components/Lista/Lista';
 import Home from './Pages/home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Pokemon from './Components/Pokemon/pokemon';
+import Return from './Components/Return/Return';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,7 +23,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/pokemon/:name' element={<Pokemon/>}/>
+          <Route path='/:name' element={<Pokemon/>}/>
         </Routes>
       </BrowserRouter>
 {/* estrutura basica de rotas */}

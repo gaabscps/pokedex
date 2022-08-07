@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Route, useParams } from 'react-router-dom';
 import api from '../../services/apiConfig'
 import '../Pokemon/pokemon.css'
+import Return from '../Return/Return';
 
 export interface NameProps {
     name: string;
@@ -40,8 +41,17 @@ function Pokemon() {
 
     return (
         <>
+            <Return />
             <div className="poke__container">
-                <div className="left__container">
+                <div className="upper__container">
+                    <img src={imagem} className="poke__img" />
+                    <div className="pokemon__basic">
+                        <p className="rc pokeName">{pokeName}</p>
+                        <p className="rc id">ID: #{id}</p>
+                        <p className="rc type">Type: {type}</p>
+                    </div>
+                </div>
+                <div className="lower__container">
                     <div className="stats__container">
                         {stats.map((stat: string) => {
                             return (
@@ -56,12 +66,6 @@ function Pokemon() {
                             )
                         })}
                     </div>
-                </div>
-                <div className="right__container">
-                    <img src={imagem} className="poke__img" />
-                    <p className="rc pokeName">{pokeName}</p>
-                    <p className="rc id">#{id}</p>
-                    <p className="rc type">{type}</p>
                 </div>
             </div>
         </>

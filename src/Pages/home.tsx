@@ -48,8 +48,6 @@ export default function Home() {
             <div className="pag__div-container">
                 <PagCard />
             </div>
-            <Pokemon
-            />
         </>
 
     )

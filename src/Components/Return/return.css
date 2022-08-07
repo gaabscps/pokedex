@@ -1,0 +1,13 @@
+
+.voltar{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.5rem;
+    padding: 1em;
+    text-align: end;
+    text-decoration: none;
+    color: black;
+}
+
+.voltar__text {
+}
