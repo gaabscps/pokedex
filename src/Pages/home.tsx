@@ -2,15 +2,12 @@ import React, { useEffect, useState } from 'react';
 import api from '../services/apiConfig';
 import Cards from '../Components/Cards/cards';
 import '../Components/Cards/cards.css'
+import PagCard from '../Components/Pagination/Pagination';
+import Search from '../Components/Search/Search';
+import Pokemon from '../Components/Pokemon/pokemon';
 
-
-type pokemon = {
-    name: string;
-    front_default: string;
-}
 
 export default function Home() {
-    const [pokemon, setPokemon] = useState<any[]>([]);
     const [pokemons, setPokemons] = useState<any[]>([]);
 
     useEffect(() => {
@@ -23,9 +20,10 @@ export default function Home() {
     // }, [pokemons])
 
     function getPokemons() {
-        api.get("pokemon/?limit=40")
-            .then((response) => setPokemons(response.data.results))
-            .catch((error) => console.log(error))
+        api.get("pokemon/?limit=20")
+            .then((response: { data: { results: React.SetStateAction<any[]>; }; }) =>
+                setPokemons(response.data.results))
+            .catch((error: any) => console.log(error))
     }
 
     // function getPokemon() {
@@ -37,6 +35,9 @@ export default function Home() {
     // }
     return (
         <>
+            <div className="search__container">
+                <Search />
+            </div>
             <div className="cards__container">
                 {pokemons.map((poke, index) => (
                     <Cards
@@ -44,6 +45,11 @@ export default function Home() {
                     />
                 ))}
             </div>
+            <div className="pag__div-container">
+                <PagCard />
+            </div>
+            <Pokemon
+            />
         </>
 
     )

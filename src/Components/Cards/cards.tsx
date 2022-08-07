@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Pokemon from '../Pokemon/pokemon'
 import api from '../../services/apiConfig';
-
+import { getValue } from '@testing-library/user-event/dist/utils';
+import { Link } from 'react-router-dom';
 
 export interface CardProps {
     name: string;
@@ -12,33 +14,43 @@ function Cards({ name }: CardProps) {
 
     const [imagem, setImagem] = useState<any>();
     const [id, setId] = useState<any>();
+    const [type, setType] = useState()
 
     useEffect(() => {
         api.get("pokemon/" + name)
-            .then((response) => {
+            .then((response: { data: any; }) => {
                 const { data } = response;
                 setImagem(data.sprites.front_default);
                 setId(data.id);
+                setType(data.types.map((type: { type: any; }) => 
+                type.type.name).join(' & '))
             }
             )
-            .catch((error) => console.log(error))
-    }, [])
+            .catch((error: any) => console.log(error));
+    }, []);
 
+    function detalhesPokemon(botaoPokemon: string) {
+
+    }
     return (
-        <Card className="card__ind" style={{ width: '15rem' }}>
-            <Card.Img variant="top" src={imagem} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    #{+ id}
-                </Card.Text>
-                <Card.Text>
-                    dasda
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
-    )
+        <>
+            <Card className="card__ind" style={{ width: '15rem' }}>
+                <Card.Img variant="top" src={imagem} />
+                <Card.Body>
+                    <Card.Title
+                        className={name}
+                    >{name}</Card.Title>
+                    <Card.Text>
+                        #{+id}
+                    </Card.Text>
+                    <Card.Text>
+                        {type}
+                    </Card.Text>
+                    <Link to={`/pokemon/` + name}> Sobre {name}</Link>
+                </Card.Body>
+            </Card>
+        </>
+    );
 }
 
 export default Cards;

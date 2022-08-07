@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import BasicExample from './Components/Navbar/navbar';
-import PagCard from './Components/Pagination/Pagination';
-import Search from './Components/Search/Search';
 import Form from './Alura/Components/Form/Form';
 import Lista from './Alura/Components/Lista/Lista';
 import Home from './Pages/home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Pokemon from './Components/Pokemon/pokemon';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,20 +15,20 @@ const root = ReactDOM.createRoot(
 
 
 root.render(
-  <React.StrictMode> 
+  <React.StrictMode>
     <BasicExample />
     <div className="card__div-container">
-      <div className="search__container">
-      <Search />
-      </div>
-      <Home />
-      <div className="pag__div-container">
-      <PagCard />
-      </div>
+{/* estrutura basica de rotas */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/pokemon/:name' element={<Pokemon/>}/>
+        </Routes>
+      </BrowserRouter>
+{/* estrutura basica de rotas */}
     </div>
 
-
-{/*  
+    {/*  
    <div>
       <Form />
       <Lista />

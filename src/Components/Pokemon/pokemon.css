@@ -1,0 +1,33 @@
+.poke__container {
+    display: flex;
+    justify-content: center;
+}
+
+.right__container {
+    width: 30%;
+}
+
+.left__container  {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.value__container {
+    margin-left: 3rem;
+}
+
+.stats__name{
+    text-align: center;
+}
+
+.rc {
+    text-align: center;
+}
+
+.poke__img{
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
