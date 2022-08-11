@@ -46,7 +46,7 @@ function Cards({ name }: CardProps) {
                     <Card.Text>
                         <p className="card__type">{type}</p>
                     </Card.Text>
-                    <Link className='about__button' to={name}> Sobre {name}</Link>
+                    <Link className='about__button' to={name}> About {name}</Link>
                 </Card.Body>
             </Card>
         </>

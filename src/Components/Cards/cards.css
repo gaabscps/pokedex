@@ -24,12 +24,12 @@
   box-shadow: 5px 5px 10px 0px rgb(70, 70, 70);
   border: solid 2px rgb(0, 0, 0);
 }
+
 .card__ind {
   width: 15rem;
   min-width: 16%;
   margin: 4px 2px;
-  background-color: rgba(255, 255, 255, 0.75);
-
+  background-color: rgba(255, 255, 255, 0.75);  
 }
 
 .card-title {
@@ -75,10 +75,11 @@
   color: black;
   text-decoration: none;
   display: block;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   text-transform: capitalize;
+  transition-duration: 0.2s;
 }
 
 .about__button:hover {

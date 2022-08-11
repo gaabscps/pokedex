@@ -6,7 +6,7 @@ function Return () {
 
 
     return (
-            <Link className='voltar' to="/"><p className="voltar__text">Voltar</p></Link>
+            <Link className='voltar' to="/"><p className="voltar__text">Back</p></Link>
 
     )
 }

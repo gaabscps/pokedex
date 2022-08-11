@@ -4,7 +4,6 @@ import Cards from '../Components/Cards/cards';
 import '../Components/Cards/cards.css'
 import PagCard from '../Components/Pagination/Pagination';
 import Search from '../Components/Search/Search';
-import Pokemon from '../Components/Pokemon/pokemon';
 
 
 export default function Home() {
@@ -12,12 +11,7 @@ export default function Home() {
 
     useEffect(() => {
         getPokemons();
-        // getPokemon();
     }, [])
-
-    // useEffect(() => {
-    //     getPokemon();
-    // }, [pokemons])
 
     function getPokemons() {
         api.get("pokemon/?limit=20")
@@ -25,14 +19,6 @@ export default function Home() {
                 setPokemons(response.data.results))
             .catch((error: any) => console.log(error))
     }
-
-    // function getPokemon() {
-    //     for (let index = 0; index < pokemons.length; index++) {
-    //             const name = pokemons[index].name;
-
-
-    //     }
-    // }
     return (
         <>
             <div className="search__container">

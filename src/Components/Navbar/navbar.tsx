@@ -10,7 +10,7 @@ function BasicExample() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <img
               alt=""
               src="https://cdn-icons-png.flaticon.com/512/361/361998.png"
